@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+
+# Backend runtime output
+backend/detection_logs/
+detection_logs/
+backend/detections*.json
+backend/*.log
+
+# Editor scratch files
+Untitled-*
+
+# PlatformIO / ESP-IDF (also covered in esp32-cam/.gitignore)
+.pio/

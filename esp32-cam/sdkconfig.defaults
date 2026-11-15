@@ -1,0 +1,21 @@
+# ============================================================
+# Willary Wildlife Detector — ESP32-CAM (AI Thinker) defaults
+# Applied on first `pio run`. Delete sdkconfig.esp32cam to regenerate.
+# ============================================================
+
+# 4 MB flash, single large app partition (camera + wifi + http fit easily)
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="4MB"
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
+
+# External PSRAM — required to hold VGA+ JPEG framebuffers
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_QUAD=y
+CONFIG_SPIRAM_SPEED_40M=y
+CONFIG_SPIRAM_TRY_ALLOCATE_WIFI_LWIP=y
+
+# Full clock for faster capture + upload
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+
+# Camera init + JPEG work needs a little more main-task stack
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192

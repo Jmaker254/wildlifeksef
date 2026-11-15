@@ -1,0 +1,5 @@
+## Managed component dependencies — fetched from the ESP Component Registry
+## on the first `pio run` (needs internet).
+dependencies:
+  idf: ">=5.0"
+  espressif/esp32-camera: "^2.0.4"

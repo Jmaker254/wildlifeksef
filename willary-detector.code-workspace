@@ -1,0 +1,56 @@
+{
+  "folders": [
+    {
+      "name": "Willary Wildlife Detector",
+      "path": "."
+    },
+    {
+      "name": "ESP32-CAM Firmware (PlatformIO)",
+      "path": "esp32-cam"
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "python",
+    "editor.fontSize": 14,
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "cmake.configureOnOpen": false,
+    "files.exclude": {
+      "**/.pio": true,
+      "**/__pycache__": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-vscode.cpptools",
+      "platformio.platformio-ide"
+    ],
+    "unwantedRecommendations": [
+      "vsciot-vscode.vscode-arduino",
+      "ms-vscode.cmake-tools"
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Run Backend Server",
+        "type": "python",
+        "request": "launch",
+        "program": "${workspaceFolder}/backend/server.py",
+        "console": "integratedTerminal",
+        "env": {
+          "OPENAI_API_KEY": "sk-your-key-here"
+        }
+      },
+      {
+        "name": "Test: Send Webcam Image",
+        "type": "python",
+        "request": "launch",
+        "program": "${workspaceFolder}/backend/test_send_image.py",
+        "console": "integratedTerminal"
+      }
+    ]
+  }
+}

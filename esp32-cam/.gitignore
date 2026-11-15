@@ -1,0 +1,16 @@
+# PlatformIO build output
+/.pio/
+/.vscode/
+
+# ESP-IDF generated config (PlatformIO writes sdkconfig.<env>)
+sdkconfig
+sdkconfig.*
+!sdkconfig.defaults
+sdkconfig.old
+
+# ESP-IDF build output (if idf.py is ever used directly)
+/build/
+
+# Component manager
+/managed_components/
+dependencies.lock
