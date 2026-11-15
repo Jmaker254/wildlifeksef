@@ -90,6 +90,12 @@ You should see the detection result printed in both terminals.
 - ESP32-CAM wired to a USB-serial adapter: `5V`/`3V3`, `GND`, `U0T→RX`, `U0R→TX`,
   and `IO0 → GND` while flashing (boot mode)
 
+> **⚠ No spaces in the project path.** PlatformIO's ESP-IDF builder fails with
+> `Detected a whitespace character in project paths`. Clone into a path like
+> `E:\projects\willary-wildlife-detector`, or map the folder to a drive letter:
+> `subst W: "E:\projects external\willary-wildlife-detector"` and open/build
+> from `W:\esp32-cam` (`subst` mappings are lost on reboot).
+
 ### Open the project
 Open `willary-detector.code-workspace`. The **ESP32-CAM Firmware (PlatformIO)**
 folder holds `platformio.ini`, so PlatformIO detects it automatically.
